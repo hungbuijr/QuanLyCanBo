@@ -1,0 +1,2 @@
+class CanBo < ApplicationRecord
+end

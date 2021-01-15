@@ -1,0 +1,2 @@
+module CanBosHelper
+end

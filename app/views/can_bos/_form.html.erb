@@ -1,0 +1,27 @@
+<%= form_with(model: can_bo, local: true) do |form| %>
+  <% if can_bo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(can_bo.errors.count, "error") %> prohibited this can_bo from being saved:</h2>
+
+      <ul>
+        <% can_bo.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label 'Họ và tên: ' %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Ngày Sinh: ' %>
+    <%= form.date_field :date_of_birth %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

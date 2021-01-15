@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Họ và Tên:</strong>
+  <%= @can_bo.name %>
+</p>
+
+<p>
+  <strong>Ngày Sinh:</strong>
+  <%= @can_bo.date_of_birth %>
+</p>
+
+<%= link_to 'Edit', edit_can_bo_path(@can_bo) %> |
+<%= link_to 'Back', can_bos_path %>
