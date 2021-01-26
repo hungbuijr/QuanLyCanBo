@@ -1,0 +1,1 @@
+json.partial! "chuyen_tu_dang_bo_khac_dens/chuyen_tu_dang_bo_khac_den", chuyen_tu_dang_bo_khac_den: @chuyen_tu_dang_bo_khac_den

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>So the dang:</strong>
+  <%= @dang_vien.so_the_dang %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dang_vien.name %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @dang_vien.enabled %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dang_vien.description %>
+</p>
+
+<%= link_to 'Edit', edit_dang_vien_path(@dang_vien) %> |
+<%= link_to 'Back', dang_viens_path %>

@@ -31,3 +31,7 @@
 
 en:
   hello: "Hello world"
+  helpers:
+    submit:
+      create: "Tạo Bản Ghi"
+      update: "Cập Nhật"

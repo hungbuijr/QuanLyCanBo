@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @trinh_do_van_hoa.name %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @trinh_do_van_hoa.enabled %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @trinh_do_van_hoa.description %>
+</p>
+
+<%= link_to 'Edit', edit_trinh_do_van_hoa_path(@trinh_do_van_hoa) %> |
+<%= link_to 'Back', trinh_do_van_hoas_path %>

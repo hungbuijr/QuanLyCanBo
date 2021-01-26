@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Trinh Do Van Hoas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Enabled</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trinh_do_van_hoas.each do |trinh_do_van_hoa| %>
+      <tr>
+        <td><%= trinh_do_van_hoa.name %></td>
+        <td><%= trinh_do_van_hoa.enabled %></td>
+        <td><%= trinh_do_van_hoa.description %></td>
+        <td><%= link_to 'Show', trinh_do_van_hoa %></td>
+        <td><%= link_to 'Edit', edit_trinh_do_van_hoa_path(trinh_do_van_hoa) %></td>
+        <td><%= link_to 'Destroy', trinh_do_van_hoa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trinh Do Van Hoa', new_trinh_do_van_hoa_path %>

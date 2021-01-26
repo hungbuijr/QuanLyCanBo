@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @qua_trinh_cong_tac.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @qua_trinh_cong_tac.description %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @qua_trinh_cong_tac.enabled %>
+</p>
+
+<%= link_to 'Edit', edit_qua_trinh_cong_tac_path(@qua_trinh_cong_tac) %> |
+<%= link_to 'Back', qua_trinh_cong_tacs_path %>

@@ -1,0 +1,2 @@
+class BoiDuongNvcsgt < ApplicationRecord
+end

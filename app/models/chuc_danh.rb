@@ -1,0 +1,2 @@
+class ChucDanh < ApplicationRecord
+end

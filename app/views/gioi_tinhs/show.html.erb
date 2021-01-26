@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gioi_tinh.name %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @gioi_tinh.enabled %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @gioi_tinh.description %>
+</p>
+
+<%= link_to 'Edit', edit_gioi_tinh_path(@gioi_tinh) %> |
+<%= link_to 'Back', gioi_tinhs_path %>

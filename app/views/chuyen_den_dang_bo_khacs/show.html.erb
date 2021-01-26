@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @chuyen_den_dang_bo_khac.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @chuyen_den_dang_bo_khac.description %>
+</p>
+
+<p>
+  <strong>Ngay chuyen di:</strong>
+  <%= @chuyen_den_dang_bo_khac.ngay_chuyen_di %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @chuyen_den_dang_bo_khac.enabled %>
+</p>
+
+<%= link_to 'Edit', edit_chuyen_den_dang_bo_khac_path(@chuyen_den_dang_bo_khac) %> |
+<%= link_to 'Back', chuyen_den_dang_bo_khacs_path %>

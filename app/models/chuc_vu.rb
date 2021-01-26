@@ -1,0 +1,2 @@
+class ChucVu < ApplicationRecord
+end

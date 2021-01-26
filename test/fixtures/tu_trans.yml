@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  ly_do: MyString
+  ngay_tu_tran: 2021-01-18
+  enabled: false
+
+two:
+  name: MyString
+  description: MyString
+  ly_do: MyString
+  ngay_tu_tran: 2021-01-18
+  enabled: false

@@ -1,0 +1,2 @@
+class ChucDanhDaQuyHoach < ApplicationRecord
+end

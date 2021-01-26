@@ -1,0 +1,2 @@
+class MonHoc < ApplicationRecord
+end

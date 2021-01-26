@@ -1,0 +1,2 @@
+class BoiDuongQuyHoachChoChucDanh < ApplicationRecord
+end

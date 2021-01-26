@@ -1,4 +1,30 @@
 Rails.application.routes.draw do
+  resources :trinh_do_theo_mon_hocs
+  resources :trinh_dos
+  resources :trinh_do_boi_duongs
+  resources :chuyen_nganhs
+  resources :boi_duong_nvcsgts
+  resources :qua_trinh_cong_tacs
+  resources :mon_hocs
+  resources :boi_duong_quy_hoach_cho_chuc_danhs
+  resources :chuc_danh_da_quy_hoaches
+  resources :chuc_danhs
+  resources :chuc_vus
+  resources :cap_bacs
+  resources :ra_khoi_dangs
+  resources :tu_trans
+  resources :chuyen_tu_dang_bo_khac_dens
+  resources :chuyen_den_dang_bo_khacs
+  resources :dang_viens
+  resources :nghe_nghiep_hien_nays
+  resources :nghe_nghiep_truoc_khi_vao_dangs
+  resources :chuyen_mon_nghiep_vus
+  resources :trinh_do_ly_luans
+  resources :trinh_do_van_hoas
+  resources :que_quans
+  resources :dan_tocs
+  resources :ton_giaos
+  resources :gioi_tinhs
   resources :can_bos
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

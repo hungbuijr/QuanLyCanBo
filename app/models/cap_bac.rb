@@ -1,0 +1,2 @@
+class CapBac < ApplicationRecord
+end

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dang Viens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>So the dang</th>
+      <th>Name</th>
+      <th>Enabled</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dang_viens.each do |dang_vien| %>
+      <tr>
+        <td><%= dang_vien.so_the_dang %></td>
+        <td><%= dang_vien.name %></td>
+        <td><%= dang_vien.enabled %></td>
+        <td><%= dang_vien.description %></td>
+        <td><%= link_to 'Show', dang_vien %></td>
+        <td><%= link_to 'Edit', edit_dang_vien_path(dang_vien) %></td>
+        <td><%= link_to 'Destroy', dang_vien, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dang Vien', new_dang_vien_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dan_toc.name %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @dan_toc.enabled %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dan_toc.description %>
+</p>
+
+<%= link_to 'Edit', edit_dan_toc_path(@dan_toc) %> |
+<%= link_to 'Back', dan_tocs_path %>

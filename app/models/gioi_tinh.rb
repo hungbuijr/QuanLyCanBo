@@ -1,0 +1,2 @@
+class GioiTinh < ApplicationRecord
+end

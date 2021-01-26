@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tu_tran.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tu_tran.description %>
+</p>
+
+<p>
+  <strong>Ly do:</strong>
+  <%= @tu_tran.ly_do %>
+</p>
+
+<p>
+  <strong>Ngay tu tran:</strong>
+  <%= @tu_tran.ngay_tu_tran %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @tu_tran.enabled %>
+</p>
+
+<%= link_to 'Edit', edit_tu_tran_path(@tu_tran) %> |
+<%= link_to 'Back', tu_trans_path %>

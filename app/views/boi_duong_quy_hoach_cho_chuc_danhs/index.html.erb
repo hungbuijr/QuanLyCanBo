@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Boi Duong Quy Hoach Cho Chuc Danhs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Enabled</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boi_duong_quy_hoach_cho_chuc_danhs.each do |boi_duong_quy_hoach_cho_chuc_danh| %>
+      <tr>
+        <td><%= boi_duong_quy_hoach_cho_chuc_danh.name %></td>
+        <td><%= boi_duong_quy_hoach_cho_chuc_danh.description %></td>
+        <td><%= boi_duong_quy_hoach_cho_chuc_danh.enabled %></td>
+        <td><%= link_to 'Show', boi_duong_quy_hoach_cho_chuc_danh %></td>
+        <td><%= link_to 'Edit', edit_boi_duong_quy_hoach_cho_chuc_danh_path(boi_duong_quy_hoach_cho_chuc_danh) %></td>
+        <td><%= link_to 'Destroy', boi_duong_quy_hoach_cho_chuc_danh, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Boi Duong Quy Hoach Cho Chuc Danh', new_boi_duong_quy_hoach_cho_chuc_danh_path %>

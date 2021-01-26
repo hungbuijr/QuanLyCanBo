@@ -1,0 +1,2 @@
+module NgheNghiepHienNaysHelper
+end

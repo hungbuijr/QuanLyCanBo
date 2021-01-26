@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @chuc_vu.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @chuc_vu.description %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @chuc_vu.enabled %>
+</p>
+
+<%= link_to 'Edit', edit_chuc_vu_path(@chuc_vu) %> |
+<%= link_to 'Back', chuc_vus_path %>

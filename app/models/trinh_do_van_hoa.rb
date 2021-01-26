@@ -1,0 +1,2 @@
+class TrinhDoVanHoa < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class RaKhoiDang < ApplicationRecord
+end

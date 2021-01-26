@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @que_quan.name %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @que_quan.enabled %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @que_quan.description %>
+</p>
+
+<%= link_to 'Edit', edit_que_quan_path(@que_quan) %> |
+<%= link_to 'Back', que_quans_path %>

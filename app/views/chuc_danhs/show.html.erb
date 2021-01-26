@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @chuc_danh.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @chuc_danh.description %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @chuc_danh.enabled %>
+</p>
+
+<%= link_to 'Edit', edit_chuc_danh_path(@chuc_danh) %> |
+<%= link_to 'Back', chuc_danhs_path %>

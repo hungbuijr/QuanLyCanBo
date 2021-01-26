@@ -1,0 +1,2 @@
+class TuTran < ApplicationRecord
+end

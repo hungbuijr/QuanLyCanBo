@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Chuyen Den Dang Bo Khacs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Ngay chuyen di</th>
+      <th>Enabled</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chuyen_den_dang_bo_khacs.each do |chuyen_den_dang_bo_khac| %>
+      <tr>
+        <td><%= chuyen_den_dang_bo_khac.name %></td>
+        <td><%= chuyen_den_dang_bo_khac.description %></td>
+        <td><%= chuyen_den_dang_bo_khac.ngay_chuyen_di %></td>
+        <td><%= chuyen_den_dang_bo_khac.enabled %></td>
+        <td><%= link_to 'Show', chuyen_den_dang_bo_khac %></td>
+        <td><%= link_to 'Edit', edit_chuyen_den_dang_bo_khac_path(chuyen_den_dang_bo_khac) %></td>
+        <td><%= link_to 'Destroy', chuyen_den_dang_bo_khac, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chuyen Den Dang Bo Khac', new_chuyen_den_dang_bo_khac_path %>

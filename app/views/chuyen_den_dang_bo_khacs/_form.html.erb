@@ -1,0 +1,37 @@
+<%= form_with(model: chuyen_den_dang_bo_khac, local: true) do |form| %>
+  <% if chuyen_den_dang_bo_khac.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(chuyen_den_dang_bo_khac.errors.count, "error") %> prohibited this chuyen_den_dang_bo_khac from being saved:</h2>
+
+      <ul>
+        <% chuyen_den_dang_bo_khac.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ngay_chuyen_di %>
+    <%= form.date_select :ngay_chuyen_di %>
+  </div>
+
+  <div class="field">
+    <%= form.label :enabled %>
+    <%= form.check_box :enabled %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

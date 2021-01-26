@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ra_khoi_dang.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ra_khoi_dang.description %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @ra_khoi_dang.enabled %>
+</p>
+
+<p>
+  <strong>Ngay ra khoi dang:</strong>
+  <%= @ra_khoi_dang.ngay_ra_khoi_dang %>
+</p>
+
+<p>
+  <strong>Hinh thuc ra khoi dang:</strong>
+  <%= @ra_khoi_dang.hinh_thuc_ra_khoi_dang %>
+</p>
+
+<%= link_to 'Edit', edit_ra_khoi_dang_path(@ra_khoi_dang) %> |
+<%= link_to 'Back', ra_khoi_dangs_path %>

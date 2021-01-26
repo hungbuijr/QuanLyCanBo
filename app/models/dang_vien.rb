@@ -1,0 +1,2 @@
+class DangVien < ApplicationRecord
+end

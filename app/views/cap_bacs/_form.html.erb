@@ -1,0 +1,32 @@
+<%= form_with(model: cap_bac, local: true) do |form| %>
+  <% if cap_bac.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cap_bac.errors.count, "error") %> prohibited this cap_bac from being saved:</h2>
+
+      <ul>
+        <% cap_bac.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :enabled %>
+    <%= form.check_box :enabled %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

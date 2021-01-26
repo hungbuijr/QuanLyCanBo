@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  enabled: false
+  ngay_ra_khoi_dang: 2021-01-18
+  hinh_thuc_ra_khoi_dang: MyString
+
+two:
+  name: MyString
+  description: MyString
+  enabled: false
+  ngay_ra_khoi_dang: 2021-01-18
+  hinh_thuc_ra_khoi_dang: MyString

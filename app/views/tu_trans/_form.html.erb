@@ -1,0 +1,42 @@
+<%= form_with(model: tu_tran, local: true) do |form| %>
+  <% if tu_tran.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tu_tran.errors.count, "error") %> prohibited this tu_tran from being saved:</h2>
+
+      <ul>
+        <% tu_tran.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ly_do %>
+    <%= form.text_field :ly_do %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ngay_tu_tran %>
+    <%= form.date_select :ngay_tu_tran %>
+  </div>
+
+  <div class="field">
+    <%= form.label :enabled %>
+    <%= form.check_box :enabled %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

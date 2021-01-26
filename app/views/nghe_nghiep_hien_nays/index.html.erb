@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Nghe Nghiep Hien Nays</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Enabled</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nghe_nghiep_hien_nays.each do |nghe_nghiep_hien_nay| %>
+      <tr>
+        <td><%= nghe_nghiep_hien_nay.name %></td>
+        <td><%= nghe_nghiep_hien_nay.enabled %></td>
+        <td><%= nghe_nghiep_hien_nay.description %></td>
+        <td><%= link_to 'Show', nghe_nghiep_hien_nay %></td>
+        <td><%= link_to 'Edit', edit_nghe_nghiep_hien_nay_path(nghe_nghiep_hien_nay) %></td>
+        <td><%= link_to 'Destroy', nghe_nghiep_hien_nay, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nghe Nghiep Hien Nay', new_nghe_nghiep_hien_nay_path %>

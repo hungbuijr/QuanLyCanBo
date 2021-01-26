@@ -1,0 +1,2 @@
+module DanTocsHelper
+end

@@ -1,0 +1,32 @@
+<%= form_with(model: trinh_do_ly_luan, local: true) do |form| %>
+  <% if trinh_do_ly_luan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(trinh_do_ly_luan.errors.count, "error") %> prohibited this trinh_do_ly_luan from being saved:</h2>
+
+      <ul>
+        <% trinh_do_ly_luan.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :enabled %>
+    <%= form.check_box :enabled %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

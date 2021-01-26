@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ton_giao.name %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @ton_giao.enabled %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ton_giao.description %>
+</p>
+
+<%= link_to 'Edit', edit_ton_giao_path(@ton_giao) %> |
+<%= link_to 'Back', ton_giaos_path %>

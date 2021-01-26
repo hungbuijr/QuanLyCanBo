@@ -1,0 +1,2 @@
+module CapBacsHelper
+end

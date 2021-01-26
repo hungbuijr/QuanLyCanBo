@@ -1,0 +1,2 @@
+module ChuyenDenDangBoKhacsHelper
+end

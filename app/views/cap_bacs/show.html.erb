@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cap_bac.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cap_bac.description %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @cap_bac.enabled %>
+</p>
+
+<%= link_to 'Edit', edit_cap_bac_path(@cap_bac) %> |
+<%= link_to 'Back', cap_bacs_path %>

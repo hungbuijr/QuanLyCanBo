@@ -1,0 +1,2 @@
+class QuaTrinhCongTac < ApplicationRecord
+end

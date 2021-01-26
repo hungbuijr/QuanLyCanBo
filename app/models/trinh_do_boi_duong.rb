@@ -1,0 +1,2 @@
+class TrinhDoBoiDuong < ApplicationRecord
+end

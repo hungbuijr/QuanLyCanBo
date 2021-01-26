@@ -1,0 +1,2 @@
+class DanToc < ApplicationRecord
+end

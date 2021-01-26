@@ -1,0 +1,32 @@
+<%= form_with(model: nghe_nghiep_hien_nay, local: true) do |form| %>
+  <% if nghe_nghiep_hien_nay.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(nghe_nghiep_hien_nay.errors.count, "error") %> prohibited this nghe_nghiep_hien_nay from being saved:</h2>
+
+      <ul>
+        <% nghe_nghiep_hien_nay.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :enabled %>
+    <%= form.check_box :enabled %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

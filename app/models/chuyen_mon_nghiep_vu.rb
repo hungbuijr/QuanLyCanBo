@@ -1,0 +1,2 @@
+class ChuyenMonNghiepVu < ApplicationRecord
+end

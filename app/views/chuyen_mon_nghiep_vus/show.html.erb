@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @chuyen_mon_nghiep_vu.name %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @chuyen_mon_nghiep_vu.enabled %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @chuyen_mon_nghiep_vu.description %>
+</p>
+
+<%= link_to 'Edit', edit_chuyen_mon_nghiep_vu_path(@chuyen_mon_nghiep_vu) %> |
+<%= link_to 'Back', chuyen_mon_nghiep_vus_path %>

@@ -1,0 +1,1 @@
+json.array! @boi_duong_quy_hoach_cho_chuc_danhs, partial: "boi_duong_quy_hoach_cho_chuc_danhs/boi_duong_quy_hoach_cho_chuc_danh", as: :boi_duong_quy_hoach_cho_chuc_danh

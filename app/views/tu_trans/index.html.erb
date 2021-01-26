@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tu Trans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Ly do</th>
+      <th>Ngay tu tran</th>
+      <th>Enabled</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tu_trans.each do |tu_tran| %>
+      <tr>
+        <td><%= tu_tran.name %></td>
+        <td><%= tu_tran.description %></td>
+        <td><%= tu_tran.ly_do %></td>
+        <td><%= tu_tran.ngay_tu_tran %></td>
+        <td><%= tu_tran.enabled %></td>
+        <td><%= link_to 'Show', tu_tran %></td>
+        <td><%= link_to 'Edit', edit_tu_tran_path(tu_tran) %></td>
+        <td><%= link_to 'Destroy', tu_tran, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tu Tran', new_tu_tran_path %>

@@ -1,0 +1,2 @@
+class TrinhDoTheoMonHoc < ApplicationRecord
+end

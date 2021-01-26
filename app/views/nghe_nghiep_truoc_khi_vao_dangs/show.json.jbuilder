@@ -1,0 +1,1 @@
+json.partial! "nghe_nghiep_truoc_khi_vao_dangs/nghe_nghiep_truoc_khi_vao_dang", nghe_nghiep_truoc_khi_vao_dang: @nghe_nghiep_truoc_khi_vao_dang

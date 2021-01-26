@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @chuyen_nganh.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @chuyen_nganh.description %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @chuyen_nganh.enabled %>
+</p>
+
+<%= link_to 'Edit', edit_chuyen_nganh_path(@chuyen_nganh) %> |
+<%= link_to 'Back', chuyen_nganhs_path %>

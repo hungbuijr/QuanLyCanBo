@@ -1,0 +1,2 @@
+class ChuyenTuDangBoKhacDen < ApplicationRecord
+end

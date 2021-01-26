@@ -1,0 +1,2 @@
+class TonGiao < ApplicationRecord
+end

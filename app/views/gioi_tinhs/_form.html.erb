@@ -1,0 +1,32 @@
+<%= form_with(model: gioi_tinh, local: true) do |form| %>
+  <% if gioi_tinh.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gioi_tinh.errors.count, "error") %> prohibited this gioi_tinh from being saved:</h2>
+
+      <ul>
+        <% gioi_tinh.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :enabled %>
+    <%= form.check_box :enabled %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
