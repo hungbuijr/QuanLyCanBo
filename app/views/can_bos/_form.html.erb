@@ -21,6 +21,11 @@
     <%= form.date_field :date_of_birth %>
   </div>
 
+  <div class="field">
+    <%= form.label 'Quê Quán: ' %>
+    <%= form.select :que_quan_id, ["",""] + QueQuan.all.map { |q| [q.name, q.id] } %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

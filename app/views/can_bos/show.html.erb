@@ -10,5 +10,10 @@
   <%= @can_bo.date_of_birth %>
 </p>
 
+<p>
+  <strong>Quê Quán:</strong>
+  <%= @can_bo.que_quan&.name %>
+</p>
+
 <%= link_to 'Edit', edit_can_bo_path(@can_bo) %> |
 <%= link_to 'Back', can_bos_path %>

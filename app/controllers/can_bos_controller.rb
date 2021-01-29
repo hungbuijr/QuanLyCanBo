@@ -69,6 +69,6 @@ class CanBosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def can_bo_params
-      params.require(:can_bo).permit(:name, :date_of_birth)
+      params.require(:can_bo).permit(:name, :date_of_birth, :que_quan_id)
     end
 end
