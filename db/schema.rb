@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_24_044717) do
+ActiveRecord::Schema.define(version: 2021_01_31_075713) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,16 +37,6 @@ ActiveRecord::Schema.define(version: 2021_01_24_044717) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "que_quan_id"
-    t.bigint "cap_bac_id"
-    t.bigint "chuc_vu_id"
-    t.bigint "chuc_danh_id"
-    t.bigint "chuc_danh_da_quy_hoach_id"
-    t.bigint "boi_duong_quy_hoach_cho_chuc_danh_id"
-    t.index ["boi_duong_quy_hoach_cho_chuc_danh_id"], name: "index_can_bos_on_boi_duong_quy_hoach_cho_chuc_danh_id"
-    t.index ["cap_bac_id"], name: "index_can_bos_on_cap_bac_id"
-    t.index ["chuc_danh_da_quy_hoach_id"], name: "index_can_bos_on_chuc_danh_da_quy_hoach_id"
-    t.index ["chuc_danh_id"], name: "index_can_bos_on_chuc_danh_id"
-    t.index ["chuc_vu_id"], name: "index_can_bos_on_chuc_vu_id"
     t.index ["que_quan_id"], name: "index_can_bos_on_que_quan_id"
   end
 
@@ -251,10 +241,5 @@ ActiveRecord::Schema.define(version: 2021_01_24_044717) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "can_bos", "boi_duong_quy_hoach_cho_chuc_danhs"
-  add_foreign_key "can_bos", "cap_bacs"
-  add_foreign_key "can_bos", "chuc_danh_da_quy_hoaches"
-  add_foreign_key "can_bos", "chuc_danhs"
-  add_foreign_key "can_bos", "chuc_vus"
   add_foreign_key "can_bos", "que_quans"
 end

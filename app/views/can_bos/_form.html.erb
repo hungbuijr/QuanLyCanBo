@@ -1,4 +1,4 @@
-<%= form_with(model: can_bo, local: true) do |form| %>
+  <%= form_with(model: can_bo, local: true) do |form| %>
   <% if can_bo.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(can_bo.errors.count, "error") %> prohibited this can_bo from being saved:</h2>
@@ -24,6 +24,31 @@
   <div class="field">
     <%= form.label 'Quê Quán: ' %>
     <%= form.select :que_quan_id, ["",""] + QueQuan.all.map { |q| [q.name, q.id] } %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Cấp Bậc: ' %>
+    <%= form.select :cap_bac_id, ["",""] + CapBac.all.map { |cb| [cb.name, cb.id] } %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Chức Vụ: ' %>
+    <%= form.select :chuc_vu_id, ["",""] + ChucVu.all.map { |cv| [cv.name, cv.id] } %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Chức Danh: ' %>
+    <%= form.select :chuc_danh_id, ["",""] + ChucDanh.all.map { |cd| [cd.name, cd.id] } %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Số Quyết Định: ' %>
+    <%= form.text_field "chuc_danh[so_quyet_dinh]" %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Ngày Cấp: ' %>
+    <%= form.date_field "chuc_danh[ngay_cap]" %>
   </div>
 
   <div class="actions">

@@ -25,7 +25,7 @@ class CanBosController < ApplicationController
   # POST /can_bos.json
   def create
     @can_bo = CanBo.new(can_bo_params)
-
+debugger
     respond_to do |format|
       if @can_bo.save
         format.html { redirect_to @can_bo, notice: 'Can bo was successfully created.' }
@@ -69,6 +69,6 @@ class CanBosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def can_bo_params
-      params.require(:can_bo).permit(:name, :date_of_birth, :que_quan_id)
+      params.require(:can_bo).permit(:name, :date_of_birth, :que_quan_id, :cap_bac_id, :chuc_vu_id, :chuc_danh_id, :chuc_danh)
     end
 end

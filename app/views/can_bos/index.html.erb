@@ -2,12 +2,17 @@
 
 <h1>Cán Bộ</h1>
 
-<table class="list_table">
+<table class="table">
   <thead>
     <tr>
       <th>Họ và Tên</th>
       <th>Ngày Sinh</th>
       <th>Quê Quán</th>
+      <th>Cấp Bậc</th>
+      <th>Chức Vụ</th>
+      <th>Chức Danh</th>
+      <th>Số QĐ</th>
+      <th>Ngày Cấp</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +23,11 @@
         <td><%= can_bo.name %></td>
         <td><%= can_bo.date_of_birth %></td>
         <td><%= can_bo.que_quan&.name %></td>
+        <td><%= can_bo.cap_bac&.name %></td>
+        <td><%= can_bo.chuc_vu&.name %></td>
+        <td><%= can_bo.chuc_danh&.name %></td>
+        <td><%= can_bo.chuc_danh&.so_quyet_dinh %></td>
+        <td><%= can_bo.chuc_danh&.ngay_cap %></td>
         <td><%= link_to 'Show', can_bo %></td>
         <td><%= link_to 'Edit', edit_can_bo_path(can_bo) %></td>
         <td><%= link_to 'Destroy', can_bo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
