@@ -1,16 +1,6 @@
-  <%= form_with(model: can_bo, local: true) do |form| %>
-  <% if can_bo.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(can_bo.errors.count, "error") %> prohibited this can_bo from being saved:</h2>
-
-      <ul>
-        <% can_bo.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%= javascript_pack_tag 'can_bos/form' %>
+<%= form_with(model: can_bo, local: true) do |form| %>
+<h3>Dữ Liệu Chung</h3>
   <div class="field">
     <%= form.label 'Họ và tên: ' %>
     <%= form.text_field :name %>
@@ -23,34 +13,175 @@
 
   <div class="field">
     <%= form.label 'Quê Quán: ' %>
-    <%= form.select :que_quan_id, ["",""] + QueQuan.all.map { |q| [q.name, q.id] } %>
+    <%= form.select :que_quan_id, QueQuan.all.map { |q| [q.name, q.id] }, include_blank: true %>
   </div>
 
   <div class="field">
+    <%= form.label 'Giới Tính: ' %>
+    <%= form.select :gioi_tinh_id, GioiTinh.all.map { |q| [q.name, q.id] }, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Tôn Giáo: ' %>
+    <%= form.select :ton_giao_id, TonGiao.all.map { |q| [q.name, q.id] }, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Dân Tộc: ' %>
+    <%= form.select :dan_toc_id, DanToc.all.map { |q| [q.name, q.id] }, include_blank: true %>
+  </div>
+<h3>Dữ Liệu Cơ Quan</h3>
+
+  <div class="field">
     <%= form.label 'Cấp Bậc: ' %>
-    <%= form.select :cap_bac_id, ["",""] + CapBac.all.map { |cb| [cb.name, cb.id] } %>
+    <%= form.select :cap_bac_id, CapBac.all.map { |cb| [cb.name, cb.id] }, include_blank: true %>
   </div>
 
   <div class="field">
     <%= form.label 'Chức Vụ: ' %>
-    <%= form.select :chuc_vu_id, ["",""] + ChucVu.all.map { |cv| [cv.name, cv.id] } %>
+    <%= form.select :chuc_vu_id, ChucVu.all.map { |cv| [cv.name, cv.id] }, include_blank: true %>
   </div>
 
   <div class="field">
     <%= form.label 'Chức Danh: ' %>
-    <%= form.select :chuc_danh_id, ["",""] + ChucDanh.all.map { |cd| [cd.name, cd.id] } %>
+    <%= form.select :chuc_danh_id, ChucDanh.all.map { |cd| [cd.name, cd.id] }, {include_blank: true}, class: 'select-chuc-danh-can-bo' %>
   </div>
 
   <div class="field">
-    <%= form.label 'Số Quyết Định: ' %>
-    <%= form.text_field "chuc_danh[so_quyet_dinh]" %>
+    <%= form.label 'Ngày Vào Ngành: ' %>
+    <%= form.date_field :ngay_vao_nganh %>
   </div>
 
   <div class="field">
-    <%= form.label 'Ngày Cấp: ' %>
-    <%= form.date_field "chuc_danh[ngay_cap]" %>
+    <%= form.label 'Chức Danh Quy Hoạch: ' %>
+    <%= form.select :chuc_danh_quy_hoach_id, ChucDanh.all.map { |cd| [cd.name, cd.id] }, {include_blank: true}, class: 'select-chuc-danh-quy-hoach-can-bo' %>
   </div>
 
+  <div class="field">
+    <%= form.fields_for :bo_nhiems do |bo_nhiem_form| %>
+      <div class="field">
+        <%= bo_nhiem_form.label 'Số Quyết Định: ' %>
+        <%= bo_nhiem_form.text_field :so_quyet_dinh %>
+      </div>
+      <div class="field">
+        <%= bo_nhiem_form.label 'Ngày Cấp: ' %>
+        <%= bo_nhiem_form.date_field :ngay_cap %>
+      </div>
+      <%= bo_nhiem_form.hidden_field :chuc_danh_id, class: 'bo-nhiem-chuc-danh-can-bo' %>
+    <% end %>
+  </div>
+
+  <div class="trinh-do-fields">
+    <div class="field">
+      <%= form.label 'Trình Độ Tin Học: ' %>
+      <%= form.select :tin_hoc_id, TinHoc.all.map { |td| [td.name, td.id] }, { include_blank: true }, class: 'select-tin-hoc' %>
+    </div>
+    <div class="field">
+      <%= form.label 'Ngoại Ngữ: ' %>
+      <%= form.select :ngoai_ngu_id, NgoaiNgu.all.map { |cd| [cd.name, cd.id] }, {include_blank: true}, class: 'select-ngoai-ngu' %>
+    </div>
+    <div class="field">
+      <%= form.label 'Bồi Dưỡng Quốc Phòng An Ninh: ' %>
+      <%= form.select :boi_duong_qpan_id, BoiDuongQpan.all.map { |cd| [cd.name, cd.id] }, {include_blank: true}, class: 'select-quoc-phong-an-ninh' %>
+    </div>
+    <div class="field">
+      <%= form.label 'Trình Độ Khác: ' %>
+      <%= form.select :trinh_do_khac_id, TrinhDoKhac.all.map { |cd| [cd.name, cd.id] }, {include_blank: true}, class: 'select-trinh-do-khac' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Trình Độ Văn Hoá: ' %>
+    <%= form.select :trinh_do_van_hoa_id, TrinhDoVanHoa.all.map { |cd| [cd.name, cd.id] }, {include_blank: true}, class: 'select-van-hoa' %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Trình Độ Lý Luận: ' %>
+    <%= form.select :trinh_do_ly_luan_id, TrinhDoLyLuan.all.map { |cd| [cd.name, cd.id] }, {include_blank: true}, class: 'select-ly-luan' %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Chuyên Môn Nghiệp Vụ: ' %>
+    <%= form.select :chuyen_mon_nghiep_vu_id, ChuyenMonNghiepVu.all.map { |cd| [cd.name, cd.id] }, {include_blank: true}, class: 'select-chuyen-mon' %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Chuyên Ngành: ' %>
+    <%= form.select :chuyen_nganh_id, ChuyenNganh.all.map { |cd| [cd.name, cd.id] }, {include_blank: true}, class: 'select-chuyen-nganh' %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Tóm tắt quá trình công tác: ' %>
+    <%= form.text_area :tom_tat_qua_trinh_cong_tac, size: "50x10", class: 'tom-tat-qua-trinh' %>
+  </div>
+
+  <h3>Dữ Liệu Đảng Viên</h3>
+  <div class="field">
+    <%= form.fields_for :dang_vien do |dang_vien_form| %>
+      <div class="field">
+        <%= dang_vien_form.label 'Số Thẻ Đảng: ' %>
+        <%= dang_vien_form.text_field :so_the_dang %>
+      </div>
+      <div class="field">
+        <%= dang_vien_form.label 'Ngày Vào Đảng: ' %>
+        <%= dang_vien_form.date_field :ngay_vao_dang %>
+      </div>
+      <div class="field">
+        <%= dang_vien_form.label 'Ngày Chính Thức: ' %>
+        <%= dang_vien_form.date_field :ngay_chinh_thuc %>
+      </div>
+      <div class="field">
+        <%= dang_vien_form.label 'Bộ Đội Công An Hưu Trí: ' %>
+        <%= dang_vien_form.check_box :bo_doi_cong_an_huu_tri %>
+      </div>
+      <div class="field">
+        <%= dang_vien_form.label 'Ngày Chuyển Đến Đảng Bộ: ' %>
+        <%= dang_vien_form.date_field :ngay_chuyen_den %>
+      </div>
+      <div class="field">
+        <%= dang_vien_form.label 'Chuyển Đến Từ Đảng Bộ: ' %>
+        <%= dang_vien_form.text_field :chuyen_tu_dang_bo %>
+      </div>
+      <div class="field">
+        <%= dang_vien_form.label 'Ngày Chuyển Đi Khỏi Đảng Bộ: ' %>
+        <%= dang_vien_form.date_field :ngay_chuyen_di %>
+      </div>
+      <div class="field">
+        <%= dang_vien_form.label 'Chuyển Đến Đảng Bộ: ' %>
+        <%= dang_vien_form.text_field :chuyen_den_dang_bo %>
+      </div>
+      <div class="field">
+        <%= dang_vien_form.label 'Ngày Ra Khỏi Đảng: ' %>
+        <%= dang_vien_form.date_field :ngay_ra_khoi_dang %>
+      </div>
+      <div class="field">
+        <%= dang_vien_form.label 'Hình Thức Ra Khỏi Đảng: ' %>
+        <%= dang_vien_form.text_field :hinh_thuc_ra_dang %>
+      </div>
+      <div class="field">
+        <%= dang_vien_form.label 'Ghi Chú: ' %>
+        <%= dang_vien_form.text_area :ghi_chu %>
+      </div>
+    <% end %>
+    <%= form.fields_for :tu_tran do |tu_tran_form| %>
+      <div class="field">
+        <%= tu_tran_form.label 'Ngày Từ Trần: ' %>
+        <%= tu_tran_form.date_field :ngay_tu_tran %>
+      </div>
+      <div class="field">
+        <%= tu_tran_form.label 'Lý Do: ' %>
+        <%= tu_tran_form.text_field :ly_do %>
+      </div>
+    <% end %>
+    <div class="field">
+      <%= form.label 'Nghề Nghiệp Trước Khi Vào Đảng: ' %>
+      <%= form.select :nghe_nghiep_truoc_khi_vao_dang_id, NgheNghiep.all.map { |cd| [cd.name, cd.id] }, {include_blank: true}, class: 'select-nghe-nghiep-truoc-vao-dang' %>
+    </div>
+    <div class="field">
+      <%= form.label 'Nghề Nghiệp Hiện Nay: ' %>
+      <%= form.select :nghe_nghiep_hien_nay_id, NgheNghiep.all.map { |cd| [cd.name, cd.id] }, {include_blank: true}, class: 'select-nghe-nghiep-hien-nay' %>
+    </div>
+  </div>
   <div class="actions">
     <%= form.submit %>
   </div>

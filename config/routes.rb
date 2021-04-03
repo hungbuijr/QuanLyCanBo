@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :chuc_danh_boi_duongs
+  resources :trinh_do_khacs
+  resources :boi_duong_qpans
+  resources :tin_hocs
+  resources :nghe_nghieps
+  resources :ngoai_ngus
+  resources :trinh_do_can_bos
+  resources :bo_nhiems
   resources :trinh_do_theo_mon_hocs
   resources :trinh_dos
   resources :trinh_do_boi_duongs

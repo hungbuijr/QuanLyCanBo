@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @boi_duong_qpan.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @boi_duong_qpan.description %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @boi_duong_qpan.enabled %>
+</p>
+
+<%= link_to 'Edit', edit_boi_duong_qpan_path(@boi_duong_qpan) %> |
+<%= link_to 'Back', boi_duong_qpans_path %>

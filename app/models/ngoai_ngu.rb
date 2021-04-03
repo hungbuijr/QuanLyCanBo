@@ -1,0 +1,2 @@
+class NgoaiNgu < ApplicationRecord
+end

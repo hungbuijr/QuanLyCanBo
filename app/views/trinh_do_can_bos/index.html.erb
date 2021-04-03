@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Trinh Do Can Bos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trinh_do_can_bos.each do |trinh_do_can_bo| %>
+      <tr>
+        <td><%= link_to 'Show', trinh_do_can_bo %></td>
+        <td><%= link_to 'Edit', edit_trinh_do_can_bo_path(trinh_do_can_bo) %></td>
+        <td><%= link_to 'Destroy', trinh_do_can_bo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trinh Do Can Bo', new_trinh_do_can_bo_path %>

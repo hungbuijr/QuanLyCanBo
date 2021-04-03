@@ -15,6 +15,10 @@ class CanBosController < ApplicationController
   # GET /can_bos/new
   def new
     @can_bo = CanBo.new
+    @can_bo.bo_nhiems.build
+    @can_bo.trinh_do_can_bos.build
+    @can_bo.build_dang_vien
+    @can_bo.build_tu_tran
   end
 
   # GET /can_bos/1/edit
@@ -69,6 +73,43 @@ debugger
 
     # Only allow a list of trusted parameters through.
     def can_bo_params
-      params.require(:can_bo).permit(:name, :date_of_birth, :que_quan_id, :cap_bac_id, :chuc_vu_id, :chuc_danh_id, :chuc_danh)
+      params.require(:can_bo).permit(
+        :name,
+        :date_of_birth,
+        :que_quan_id,
+        :cap_bac_id,
+        :chuc_vu_id,
+        :chuc_danh_id,
+        :dan_toc_id,
+        :gioi_tinh_id,
+        :ton_giao_id,
+        :chuc_danh_quy_hoach_id,
+        :chuc_danh_bo_nhiem_id,
+        :trinh_do_van_hoa_id,
+        :trinh_do_ly_luan_id,
+        :chuyen_mon_nghiep_vu_id,
+        :chuyen_nganh_id,
+        :ngoai_ngu_id,
+        :nghe_nghiep_truoc_khi_vao_dang_id,
+        :nghe_nghiep_hien_nay_id,
+        :tom_tat_qua_trinh_cong_tac,
+        :ngay_vao_nganh,
+        bo_nhiems_attributes: [:id, :so_quyet_dinh, :ngay_cap, :chuc_danh_id],
+        trinh_do_can_bos_attributes: [:trinh_do_id, :cap_do],
+        dang_vien_attributes: [
+          :so_the_dang,
+          :ngay_vao_dang,
+          :ngay_chinh_thuc,
+          :bo_doi_cong_an_huu_tri,
+          :ngay_chuyen_di,
+          :chuyen_den_dang_bo,
+          :ngay_chuyen_den,
+          :chuyen_tu_dang_bo,
+          :ngay_ra_khoi_dang,
+          :hinh_thuc_ra_dang,
+          :ghi_chu
+        ],
+        tu_tran_attributes: [:ngay_tu_tran, :ly_do]
+      )
     end
 end

@@ -1,0 +1,2 @@
+module NgoaiNgusHelper
+end

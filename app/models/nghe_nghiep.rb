@@ -1,0 +1,2 @@
+class NgheNghiep < ApplicationRecord
+end

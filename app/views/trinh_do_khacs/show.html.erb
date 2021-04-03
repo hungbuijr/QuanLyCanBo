@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @trinh_do_khac.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @trinh_do_khac.description %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @trinh_do_khac.enabled %>
+</p>
+
+<%= link_to 'Edit', edit_trinh_do_khac_path(@trinh_do_khac) %> |
+<%= link_to 'Back', trinh_do_khacs_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ngoai Ngus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Enabled</th>
+      <th>Cap do</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ngoai_ngus.each do |ngoai_ngu| %>
+      <tr>
+        <td><%= ngoai_ngu.name %></td>
+        <td><%= ngoai_ngu.description %></td>
+        <td><%= ngoai_ngu.enabled %></td>
+        <td><%= ngoai_ngu.cap_do %></td>
+        <td><%= link_to 'Show', ngoai_ngu %></td>
+        <td><%= link_to 'Edit', edit_ngoai_ngu_path(ngoai_ngu) %></td>
+        <td><%= link_to 'Destroy', ngoai_ngu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ngoai Ngu', new_ngoai_ngu_path %>

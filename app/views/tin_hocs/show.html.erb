@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tin_hoc.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tin_hoc.description %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @tin_hoc.enabled %>
+</p>
+
+<%= link_to 'Edit', edit_tin_hoc_path(@tin_hoc) %> |
+<%= link_to 'Back', tin_hocs_path %>

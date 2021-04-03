@@ -1,0 +1,2 @@
+class TrinhDoCanBo < ApplicationRecord
+end

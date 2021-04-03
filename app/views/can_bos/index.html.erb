@@ -2,17 +2,36 @@
 
 <h1>Cán Bộ</h1>
 
-<table class="table">
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Họ và Tên</th>
       <th>Ngày Sinh</th>
       <th>Quê Quán</th>
+      <th>Tôn Giáo</th>
+      <th>Giới Tính</th>
+      <th>Dân Tộc</th>
       <th>Cấp Bậc</th>
       <th>Chức Vụ</th>
       <th>Chức Danh</th>
       <th>Số QĐ</th>
       <th>Ngày Cấp</th>
+      <th>Ngày Vào Ngành, Vào Đảng</th>
+      <th>Ngày Vào Đảng Chính Thức</th>
+      <th>Số Thẻ Đảng</th>
+      <th>Bộ Đội CA Hưu Trí</th>
+      <th></th>
+      <th>Chức Danh Đã Quy Hoạch</th>
+      <th>Văn Hoá</th>
+      <th>Tin Học</th>
+      <th>Ngoại Ngữ</th>
+      <th>Bồi Dưỡng QPAN</th>
+      <th>Trình Độ Khác</th>
+      <th>Lý Luận Chính Trị</th>
+      <th>Nghiệp Vụ</th>
+      <th>Chuyên Ngành</th>
+      <th>Tóm Tắt Quá Trình Công Tác</th>
+      <th>Nghề Nghiệp</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,11 +42,29 @@
         <td><%= can_bo.name %></td>
         <td><%= can_bo.date_of_birth %></td>
         <td><%= can_bo.que_quan&.name %></td>
+        <td><%= can_bo.ton_giao&.name %></td>
+        <td><%= can_bo.gioi_tinh&.name %></td>
+        <td><%= can_bo.dan_toc&.name %></td>
         <td><%= can_bo.cap_bac&.name %></td>
         <td><%= can_bo.chuc_vu&.name %></td>
         <td><%= can_bo.chuc_danh&.name %></td>
-        <td><%= can_bo.chuc_danh&.so_quyet_dinh %></td>
-        <td><%= can_bo.chuc_danh&.ngay_cap %></td>
+        <td><%= can_bo.bo_nhiems.find_by_chuc_danh_id(can_bo.chuc_danh_id)&.so_quyet_dinh %></td>
+        <td><%= can_bo.bo_nhiems.find_by_chuc_danh_id(can_bo.chuc_danh_id)&.ngay_cap %></td>
+        <td><%= can_bo.ngay_vao_nganh_vao_dang %></td>
+        <td><%= can_bo.ngay_chinh_thuc %></td>
+        <td><%= can_bo.so_the_dang %></td>
+        <td><%= can_bo.bo_doi_cong_an_huu_tri %></td>
+        <td><%= can_bo.chuc_danh_quy_hoach&.name %></td>
+        <td><%= can_bo.trinh_do_van_hoa&.name %></td>
+        <td><%= can_bo.tin_hoc&.name %></td>
+        <td><%= can_bo.ngoai_ngu&.name %></td>
+        <td><%= can_bo.boi_duong_qpan&.name %></td>
+        <td><%= can_bo.trinh_do_khac&.name %></td>
+        <td><%= can_bo.trinh_do_ly_luan&.name %></td>
+        <td><%= can_bo.chuyen_mon_nghiep_vu&.name %></td>
+        <td><%= can_bo.chuyen_nganh&.name %></td>
+        <td><%= can_bo.tom_tat_qua_trinh_cong_tac %></td>
+        <td><%= can_bo.nghe_nghiep %></td>
         <td><%= link_to 'Show', can_bo %></td>
         <td><%= link_to 'Edit', edit_can_bo_path(can_bo) %></td>
         <td><%= link_to 'Destroy', can_bo, method: :delete, data: { confirm: 'Are you sure?' } %></td>

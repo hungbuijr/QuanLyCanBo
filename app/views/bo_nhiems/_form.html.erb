@@ -1,0 +1,17 @@
+<%= form_with(model: bo_nhiem, local: true) do |form| %>
+  <% if bo_nhiem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bo_nhiem.errors.count, "error") %> prohibited this bo_nhiem from being saved:</h2>
+
+      <ul>
+        <% bo_nhiem.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

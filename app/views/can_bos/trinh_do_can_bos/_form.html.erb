@@ -1,0 +1,9 @@
+
+<div class="field">
+  <%= label_tag 'Trình Độ Cán Bộ: ' %>
+  <%= select_tag , TrinhDo.all.map { |td| [td.name, td.id] }, { include_blank: true }, class: 'select-trinh-do' %>
+</div>
+<div class="field">
+  <%= form.label 'Cấp Độ Môn Học: ' %>
+  <%= form.text_field :cap_do %>
+</div>

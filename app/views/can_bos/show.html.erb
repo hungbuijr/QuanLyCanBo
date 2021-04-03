@@ -32,12 +32,12 @@
 
 <p>
   <strong>Số Quyết Định:</strong>
-  <%= @can_bo.chuc_danh&.so_quyet_dinh %>
+  <%= @can_bo.bo_nhiems.first&.so_quyet_dinh %>
 </p>
 
 <p>
   <strong>Ngày Cấp:</strong>
-  <%= @can_bo.chuc_danh&.ngay_cap %>
+  <%= @can_bo.bo_nhiems.first&.ngay_cap %>
 </p>
 
 <%= link_to 'Edit', edit_can_bo_path(@can_bo) %> |

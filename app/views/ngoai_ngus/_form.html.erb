@@ -1,0 +1,37 @@
+<%= form_with(model: ngoai_ngu, local: true) do |form| %>
+  <% if ngoai_ngu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ngoai_ngu.errors.count, "error") %> prohibited this ngoai_ngu from being saved:</h2>
+
+      <ul>
+        <% ngoai_ngu.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :enabled %>
+    <%= form.check_box :enabled %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cap_do %>
+    <%= form.text_field :cap_do %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

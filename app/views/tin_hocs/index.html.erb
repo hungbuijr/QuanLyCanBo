@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tin Hocs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Enabled</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tin_hocs.each do |tin_hoc| %>
+      <tr>
+        <td><%= tin_hoc.name %></td>
+        <td><%= tin_hoc.description %></td>
+        <td><%= tin_hoc.enabled %></td>
+        <td><%= link_to 'Show', tin_hoc %></td>
+        <td><%= link_to 'Edit', edit_tin_hoc_path(tin_hoc) %></td>
+        <td><%= link_to 'Destroy', tin_hoc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tin Hoc', new_tin_hoc_path %>

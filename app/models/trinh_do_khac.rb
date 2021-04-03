@@ -1,0 +1,2 @@
+class TrinhDoKhac < ApplicationRecord
+end

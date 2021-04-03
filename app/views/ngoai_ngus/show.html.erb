@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ngoai_ngu.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ngoai_ngu.description %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @ngoai_ngu.enabled %>
+</p>
+
+<p>
+  <strong>Cap do:</strong>
+  <%= @ngoai_ngu.cap_do %>
+</p>
+
+<%= link_to 'Edit', edit_ngoai_ngu_path(@ngoai_ngu) %> |
+<%= link_to 'Back', ngoai_ngus_path %>

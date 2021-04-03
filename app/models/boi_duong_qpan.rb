@@ -1,0 +1,2 @@
+class BoiDuongQpan < ApplicationRecord
+end

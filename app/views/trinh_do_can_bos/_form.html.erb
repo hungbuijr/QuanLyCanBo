@@ -1,0 +1,32 @@
+<%= form_with(model: trinh_do_can_bo, local: true) do |form| %>
+  <% if trinh_do_can_bo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(trinh_do_can_bo.errors.count, "error") %> prohibited this trinh_do_can_bo from being saved:</h2>
+
+      <ul>
+        <% trinh_do_can_bo.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label 'Trình Độ: ' %>
+    <%= form.select :trinh_do_id, TrinhDo.all.map { |td| [td.name, td.id] }, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Cán Bộ: ' %>
+    <%= form.select :can_bo_id, CanBo.all.map { |td| [td.name, td.id] }, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Cấp Độ Môn Học: ' %>
+    <%= form.text_field :cap_do %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
